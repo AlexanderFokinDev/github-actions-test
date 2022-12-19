@@ -1,0 +1,15 @@
+name: Actions Workflow
+
+on: [push]
+
+jobs:
+  run-github-ations:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        id: greet
+        uses: actions/github-actions-test@v1
+        with:
+          who-to-greet: Aleksandr
+      - name: Log Greeting Time
+        run: echo "${{ steps.greet.outputs.time }}"
