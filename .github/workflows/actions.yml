@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: echo a string
         id: greet
-        uses: actions/github-actions-test@v1
+        uses: actions/github-actions-test@main
         with:
           who-to-greet: Aleksandr
       - name: Log Greeting Time
