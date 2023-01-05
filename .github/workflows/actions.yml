@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: echo a string
         id: greet
-        uses: actions/github-actions-test@d0527efa5446816896365658676b36f79dd93d88
+        uses: actions/checkout@d0527efa5446816896365658676b36f79dd93d88
         with:
           who-to-greet: Aleksandr
       - name: Log Greeting Time
