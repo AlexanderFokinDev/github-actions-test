@@ -7,9 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
-        id: greet
-        uses: actions/checkout@d0527efa5446816896365658676b36f79dd93d88
-        with:
-          who-to-greet: Aleksandr
+        run:
+          pwd
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
       - name: Log Greeting Time
         run: echo "${{ steps.greet.outputs.time }}"
